@@ -33,12 +33,12 @@ export default function Slider({ posts }) {
 <Postcard key={post.sys.id} post={post} />
          ))}</div> */}
 
-      <div className={styles.frame}>
+      {/* <div className={styles.frame}>
         <img src="11.jpg" className={styles.image} />
       </div>
       <div className={styles.frame}>
         <img src="22.jpg" className={styles.image} />
-      </div>
+      </div> */}
       <div className={styles.frame}>
         <img
           src="1.jpg"
@@ -57,7 +57,7 @@ export default function Slider({ posts }) {
           className={styles.image}
         />
       </div>
-      <div className={styles.frame}>
+{/*       <div className={styles.frame}>
         <img
           src="4.jpg"
           className={styles.image}
@@ -80,14 +80,14 @@ export default function Slider({ posts }) {
           src="7.jpg"
           className={styles.image}
         />
-      </div>
+      </div> */}
       <div className={styles.frame}>
         <img
           src="8.jpg"
           className={styles.image}
         />
       </div>
-      <div className={styles.frame}>
+{/*       <div className={styles.frame}>
         <img
           src="9.jpg"
           className={styles.image}
@@ -98,14 +98,14 @@ export default function Slider({ posts }) {
           src="10.jpg"
           className={styles.image}
         />
-      </div>
+      </div> */}
       <div className={styles.frame}>
         <img
           src="12.jpg"
           className={styles.image}
         />
       </div>
-      <div className={styles.frame}>
+{/*       <div className={styles.frame}>
         <img
           src="13.jpg"
           className={styles.image}
@@ -116,7 +116,7 @@ export default function Slider({ posts }) {
           src="14.jpg"
           className={styles.image}
         />
-      </div>
+      </div> */}
     </Carousel>
   );
 }

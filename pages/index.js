@@ -46,7 +46,7 @@ const currentPosts = posts.slice(0, 4)
     <div className={styles.container}>
       <Head>
         <title>УТСЗН АГР ЛНР</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon-lnr.png" />
       </Head>
       <div className={styles.headerframe}>
         <div className={styles.flag}>
