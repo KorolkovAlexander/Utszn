@@ -1,0 +1,123 @@
+.sidewrapper{
+left:0;
+top: 0;
+margin-left: -700px; 
+position: absolute;
+width :0px;
+height: 100%;
+background: rgb(0,2,26);
+text-align: left;
+transition: width 1s; 
+}
+
+.sidewrapperactive{
+border-top-style: outset;
+border-top-color: blanchedalmond;
+border-top-width:   1px;
+left:0;
+top: 0;
+margin-left: -700px;
+position: absolute;
+width :700px;
+height: 100%;
+background: rgb(0,2,26);
+text-align: left;
+transition: width 1s; 
+display: flex;
+flex-direction: column;
+align-items: center; 
+}
+
+.menuwrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;   
+    align-items: center;
+    justify-content:flex-start;
+    padding-top: 15%;
+    display: none;
+}
+
+.menuwrapperactive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top: 15%;
+}
+
+.top{
+    color: white;
+    font-size: 34px;
+    position: relative;
+    line-height: 1;
+}
+
+.top:hover{
+  /*   border-bottom-color: whitesmoke;
+    border-bottom-style: solid; */
+    cursor: pointer;
+}
+
+.calc{
+    font-size: 40px;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+
+}
+
+.top:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #00a650; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.top:hover:after,
+.top:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+
+.contact{
+    font-size: 30px;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    width: 100%;
+}
+
+.contacthead{
+
+}
+
+
+.contactwrapper{
+    width: 80%;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-column-gap: 10px;
+}
+
+
+.address{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}

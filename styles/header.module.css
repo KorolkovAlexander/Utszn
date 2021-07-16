@@ -1,0 +1,79 @@
+.header {
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 3, 26);
+  padding: 50px 80px;
+}
+
+.ul {
+  display: flex;
+}
+
+.li {
+  padding-right: 2rem;
+  font-size: 18px;
+  list-style-type: none;
+  color: white;
+}
+
+.list{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list2{
+  color: white;;  
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list:hover{
+  color:cornflowerblue;
+}
+
+.list2:hover{
+  color:cornflowerblue;
+}
+
+.mainmenu{
+  margin-right: 5px;
+  font-size: 26px;
+}
+
+.icon{
+  cursor: pointer;
+  transition: all 1s;
+  transform: rotate(270deg);
+  padding-left: 0.5vh;
+}
+
+.icondefault{
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.contacts{
+  transition: all 0.8s;  
+  visibility:collapse;
+  margin-left: 300px;
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;  
+}
+
+.contacts:hover{
+  display: none;
+}
+
+.contactsdefault{
+  cursor: pointer;
+  transition: all 0.8s;
+}

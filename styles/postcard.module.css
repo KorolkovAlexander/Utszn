@@ -1,0 +1,29 @@
+.post 
+{
+    
+}
+
+.postgrid{
+    width: 325px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.postTitle{
+font-size: 36px;
+padding-bottom: 220px;
+height: 250px;
+}
+
+.postDate{
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+.postImage{
+
+}

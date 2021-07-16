@@ -1,0 +1,25 @@
+.post 
+{
+    width: 750px;
+    height: 700px;
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    margin-left: 80px;
+    word-wrap: break-word;
+}
+.postgrid
+ {
+    margin-top: 50px; 
+ }
+
+.postTitle{
+font-size: 36px;
+padding-bottom: 220px;
+height: 250px;
+}
+
+.postDate{
+    padding-bottom: 20px;
+    font-size: 16px;
+}

@@ -1,0 +1,13 @@
+.wrap {
+  background: linear-gradient(to right, rgba(255, 239, 213, 0.6), rgba(255, 239, 213, 0.1));
+  height: 150px;
+  width: 40%;
+  top: 62px;
+  right: 35%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

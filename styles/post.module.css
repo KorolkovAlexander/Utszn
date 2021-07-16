@@ -1,0 +1,35 @@
+.wrap {
+  width: 100%;
+  margin: 40px 0px 40px -150px;
+
+  transition: all 1s;
+}
+
+.wrap2 {
+  margin: 40px 0px 40px 0px;
+
+  width: 100%;
+  transition: all 1s;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  max-height: 400px;
+  max-width: 700px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
