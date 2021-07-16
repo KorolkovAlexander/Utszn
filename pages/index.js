@@ -21,13 +21,12 @@ export const getStaticProps = async () => {
   const resmain = await client.getEntries({ content_type: "mainposts" });
 
   return {
-    props: { posts: res.items, mainposts: resmain.items },
+    props: { posts: res.items, mainposts: resmain.items }, revalidate: 1
   };
 };
 
 export default function Home({ posts, mainposts }) {
-  /* posts.pop() */  console.log([posts])
- console.log(posts.slice(0))
+
 
 const [state, setState] = useState(true)
 

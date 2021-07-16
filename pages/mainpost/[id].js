@@ -11,7 +11,7 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
-export const getStaticPaths = async () => {
+/* export const getStaticPaths = async () => {
   const res = await client.getEntries({
     content_type: "mainposts",
   });
@@ -26,17 +26,17 @@ export const getStaticPaths = async () => {
     paths,
     fallback: true,
   };
-};
+}; */
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async () => {
   const { items } = await client.getEntries({
     content_type: "mainposts",
-    "fields.id": params.id,
+    /* "fields.id": params.id, */
   });
 
   return {
     props: { posts: items[0] },
-    revalidate: 1,
+    /* revalidate: 1, */
   };
 };
 
