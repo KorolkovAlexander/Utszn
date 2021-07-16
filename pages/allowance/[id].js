@@ -40,7 +40,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function Allowance({ posts }) {
+export default function Allowanceid({ posts }) {
   const [state, setState] = useState(false);
 
   const updateData = (value) => {

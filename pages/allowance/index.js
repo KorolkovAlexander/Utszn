@@ -6,12 +6,12 @@ import styles from "../../styles/allowance.module.css";
 import Link from "next/link";
 
 
-const client = createClient({
+/* const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+  }); */
 
-export const getStaticPaths = async () => {
+/* export const getStaticPaths = async () => {
     const res = await client.getEntries({
       content_type: "allowance",
     });
@@ -26,7 +26,7 @@ export const getStaticPaths = async () => {
       paths,
       fallback: true,
     };
-  };
+  }; */
 
 
 
@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
 
 
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async () => {
     const client = createClient({
       accessToken: process.env.CONTENTFUL_ACCESS_KEY,
       space: process.env.CONTENTFUL_SPACE_ID,
@@ -57,7 +57,6 @@ export const getStaticProps = async ({params}) => {
 
 export default function Allowance({posts}){
 
-   console.log([posts])
 
 return(
     <div>
