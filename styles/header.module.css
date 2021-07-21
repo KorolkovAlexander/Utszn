@@ -8,6 +8,7 @@
   align-items: center;
   background: rgb(0, 3, 26);
   padding: 50px 80px;
+  
 }
 
 .ul {
@@ -15,7 +16,7 @@
 }
 
 .li {
-  padding-right: 2rem;
+ /*  margin-right: 2rem; */
   font-size: 18px;
   list-style-type: none;
   color: white;
@@ -69,6 +70,12 @@
   pointer-events: none;  
 }
 
+@media screen and (max-width: 1390px){
+  .contacts{
+    margin-left: 150px;
+  }
+}
+
 .contacts:hover{
   display: none;
 }
@@ -76,4 +83,8 @@
 .contactsdefault{
   cursor: pointer;
   transition: all 0.8s;
+}
+
+.link{
+  margin-right: 2rem;
 }

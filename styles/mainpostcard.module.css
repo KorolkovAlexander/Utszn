@@ -23,3 +23,30 @@ height: 250px;
     padding-bottom: 20px;
     font-size: 16px;
 }
+
+.postImage{
+    width: 750px;
+    height: 450px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1600px){
+    .postImage{
+        width: 700px;
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .postImage{
+        width: 600px;
+        height: 360px;
+    }
+    .postTitle{
+        font-size: 30px;
+        height: 200px;
+    }
+    .post{
+        width: 600px;
+    }
+}

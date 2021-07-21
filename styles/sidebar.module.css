@@ -1,0 +1,8 @@
+
+.sidewrapper{
+    position: fixed;
+    height: 100%;
+    width: 35vh;
+    background: peru;
+    text-align: left;
+}

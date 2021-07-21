@@ -18,24 +18,24 @@ updateData(state);
   return (
     <header className={styles.header}>
       <div  className={state ? styles.list : styles.list2} onClick={handler}><div className={styles.mainmenu}><div className={state ? styles.icondefault : styles.icon}><RiFileListLine /></div></div><div className={state ? styles.contactsdefault : styles.contacts}>Меню сайта</div> </div>
-      <nav>
+      <nav >
         <ul className={styles.ul}>
-        <Link href={`/`}><a>
+        <Link href={`/`}><a className={styles.link}>
           <li className={styles.li}>Главная</li>
           </a></Link>
-          <Link href={`allowance/`}><a>
+          <Link href={`allowance/`}><a className={styles.link}>
           <li className={styles.li}>Пособия</li>
           </a></Link>
-          <Link href={`concessions/`}><a>
+          <Link href={`concessions/`}><a className={styles.link}>
           <li className={styles.li}>Льготы</li>
           </a></Link>
-          <Link href={`subsidy/`}><a>
+          <Link href={`subsidy/`}><a className={styles.link}>
           <li className={styles.li}>Субсидия</li>
           </a></Link>
-          <Link href={`invalids/`}><a>
+          <Link href={`invalids/`}><a className={styles.link}>
           <li className={styles.li}>Инвалидам</li>
           </a></Link>
-          <Link href={`price-request/`}><a>
+          <Link href={`price-request/`}><a className={styles.link}>
           <li className={styles.li}>Ценовые запросы</li>
           </a></Link>
         </ul>

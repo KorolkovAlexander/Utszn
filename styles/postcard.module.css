@@ -27,3 +27,12 @@ height: 250px;
 .postImage{
 
 }
+
+@media screen and (max-width: 1390px){
+.postTitle{
+    font-size: 28px;
+}
+.postgrid{
+    width: 230px;
+}
+}

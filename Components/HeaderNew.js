@@ -12,22 +12,22 @@ const HeaderNew = () => {
      
       <nav>
         <ul className={styles.ul}>
-        <Link href={`/`}><a>
+        <Link href={`/`}><a className={styles.link}>
           <li className={styles.li}>Главная</li>
           </a></Link>
-          <Link href={`allowance/`}><a>
+          <Link href={`allowance/`}><a className={styles.link}>
           <li className={styles.li}>Пособия</li>
           </a></Link>
-          <Link href={`concessions/`}><a>
+          <Link href={`concessions/`}><a className={styles.link}>
           <li className={styles.li}>Льготы</li>
           </a></Link>
-          <Link href={`subsidy/`}><a>
+          <Link href={`subsidy/`}><a className={styles.link}>
           <li className={styles.li}>Субсидия</li>
           </a></Link>
-          <Link href={`invalids/`}><a>
+          <Link href={`invalids/`}><a className={styles.link}>
           <li className={styles.li}>Инвалидам</li>
           </a></Link>
-          <Link href={`price-request/`}><a>
+          <Link href={`price-request/`}><a className={styles.link}>
           <li className={styles.li}>Ценовые запросы</li>
           </a></Link>
         </ul>

@@ -40,8 +40,8 @@ return(
 <Image className={styles.im}
                 src={"https:" + post.fields.images.fields.file.url}
                 
-                width={ '750px' }/* post.fields.images.fields.file.details.image.width */
-                height={ '450px' }/* post.fields.images.fields.file.details.image.height */
+                width= {post.fields.images.fields.file.details.image.width }
+                height={ post.fields.images.fields.file.details.image.height }
               />
               </div></a></Link>
               </div>

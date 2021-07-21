@@ -20,30 +20,21 @@ export default function PostBundle ({post}){
   var dateFormat = require("dateformat");
 var d = post.fields.date 
 return(
-  
    
   <Link href={`posts/${post.fields.id}`}><a className={styles.post}> 
-  
   
   <div>
 
 <Image 
-               src={"https:" + post.fields.images.fields.file.url}
-               
+               src={"https:" + post.fields.images.fields.file.url}             
                width={ '180px' } /* post.fields.images.fields.file.details.image.width  */
                height={ '148px' } /* post.fields.images.fields.file.details.image.height  */
              /> 
              </div>
 <div className={styles.title}>{post.fields.title}</div>
 {/* <div> */}
-
 {/* {getDate(d)} */}
-
-
 {/* </div> */}
-
-
-             
                </a></Link> 
               
 
