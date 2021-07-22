@@ -1,10 +1,10 @@
-import { useRouter } from "next/router";
 import { createClient } from "contentful";
 import Image from "next/image";
 import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
 import Footer from "../../Components/Footer";
+import { useRouter } from 'next/router'
 
 
 const client = createClient({
@@ -12,7 +12,7 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
-/* export const getStaticPaths = async () => {
+/* const Paths = async () => {
   const res = await client.getEntries({
     content_type: "posts"
   });
@@ -27,12 +27,24 @@ const client = createClient({
     paths,
     fallback: true,
   };
-}; */
+};  */
 
-export const getServerSideProps = async (/* { params } */) => {
+
+export const getServerSideProps = async (context) => {
+  const { id } = context.query;
+  const res = await client.getEntries({ content_type: "posts" });
+  /* const paths = res.items.map((item) => {
+    return {
+      params: { id: item.fields.id },
+    };
+  }); */
+
+
+
+ 
   const { items } = await client.getEntries({
     content_type: "posts",
-    /* "fields.id": params.id, */
+        "fields.id": id
   });
 
   return {
@@ -40,13 +52,15 @@ export const getServerSideProps = async (/* { params } */) => {
    /*  revalidate: 1, */
   };
 };
-
 export default function Post({ posts }) {
   const [state, setState] = useState(false);
+ 
 
+  
   const updateData = (value) => {
     setState(value);
   };
+
   return (
     <div>
     <Sidebar tumb={state} updateData={updateData} />
@@ -66,3 +80,5 @@ export default function Post({ posts }) {
   </div>
   );
 }
+
+

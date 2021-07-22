@@ -1,3 +1,9 @@
+.background{
+  background-image: url("../public/back.png");
+  background-repeat: no-repeat;
+}
+
+
 .output {
   background-image: url("../public/calc2.jpg");
   height: 500px;
@@ -9,8 +15,30 @@
 }
 
 .result {
-  margin-bottom: 190px;
-  margin-right: 70px;
-  font-size: 26px;
-  transform: rotate(-8deg);
+  margin-bottom: 100px;
+  margin-right: 0px;
+  font-size: 22px;
+  transform: rotate(-5.5deg);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.calc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../public/back.png");
+  background-repeat: no-repeat;
+}
+
+.input{
+  height: 100px;
+  width: 200px;
+  font-size: 30px;
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 
-export default function Postcard ({post, firstpost}){
+export default function Postcard ({post}){
    var options = {
     day: 'numeric',
     month: 'long',

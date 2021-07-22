@@ -9,18 +9,18 @@ export default function Calc() {
   const a = () => {
     return 7500 - (state / 5) * 0.32 == 7500 || 7500 - (state / 5) * 0.32 < 0
       ? "0"
-      : 7500 - (state / 5) * 0.32;
+      : Math.trunc((7500 - (state / 5) * 0.32) * 100) / 100;
   };
   return (
-    <div>
+    
       <div className={styles.calc}>
         <h2>
           Здесь вы можете узнать сумму своей компенсационной выплаты введя сумму
-          дохода вашей семьи за последние полгода
+          дохода вашей семьи за последние полгода в форму ниже
         </h2>
 
         <form className={styles.form}>
-          <input
+          <input 
             type="number"
             max="999999"
             maxlength="6"
@@ -30,12 +30,12 @@ export default function Calc() {
           />
         </form>
 
-        <h3>Размер компенсационной выплаты составляет: {a()}</h3>
-
+<div className={styles.container}>
         <div className={styles.output}>
-          <div className={styles.result}>{a()}</div>
-        </div>
+          <div className={styles.result}>{a()}р.</div>
+        </div></div>
+        <h3>Размер компенсационной выплаты составляет: {a()} рублей</h3>
       </div>
-    </div>
+    
   );
 }

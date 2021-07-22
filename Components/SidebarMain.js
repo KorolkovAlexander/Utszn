@@ -8,7 +8,7 @@ export default function SidebarMain({ state }) {
     <div className={state ? styles.sidewrapper : styles.sidewrapperactive}>
       <div className={state ? styles.menuwrapper : styles.menuwrapperactive}>
         <div className={styles.top}>
-          <Link href={"/calc"}>
+          <Link href={"/calculator"}>
             <a className={styles.link}>
               <div className={styles.calc}>
                 <CgCalculator />
