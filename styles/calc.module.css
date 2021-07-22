@@ -17,8 +17,9 @@
 .result {
   margin-bottom: 100px;
   margin-right: 0px;
-  font-size: 22px;
+  font-size: 42px;
   transform: rotate(-5.5deg);
+  font-family: 'Fuggles', cursive;
 }
 
 .container{
@@ -35,6 +36,7 @@
   flex-direction: column;
   background-image: url("../public/back.png");
   background-repeat: no-repeat;
+  font-family: 'Fuggles', cursive;
 }
 
 .input{

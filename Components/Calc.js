@@ -16,7 +16,7 @@ export default function Calc() {
       <div className={styles.calc}>
         <h2>
           Здесь вы можете узнать сумму своей компенсационной выплаты введя сумму
-          дохода вашей семьи за последние полгода в форму ниже
+          дохода вашей семьи за последний год в форму ниже
         </h2>
 
         <form className={styles.form}>
@@ -32,7 +32,7 @@ export default function Calc() {
 
 <div className={styles.container}>
         <div className={styles.output}>
-          <div className={styles.result}>{a()}р.</div>
+          <div className={styles.result}>{a()} р.</div>
         </div></div>
         <h3>Размер компенсационной выплаты составляет: {a()} рублей</h3>
       </div>
