@@ -56,6 +56,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   transition: margin 1s;
+  background-color: #f8f8f8be;
 }
 
 .maini {
@@ -70,10 +71,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   transition: margin 1s;
+  background-color:#f8f8f8be;
 }
 
-@media screen and (max-width: 1390px){
-  .maini{
+@media screen and (max-width: 1390px) {
+  .maini {
     margin: 0rem 0px 0rem 1000px;
   }
 }
@@ -190,6 +192,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px 100px;
+}
+
+@media (max-width: 1390px) {
+  .postWrapper {
+    width: 630px;
+    gap: 0px 80px;
+  }
 }
 
 .mainpost {

@@ -39,7 +39,7 @@ export default function Footer(){
 
 <div className={styles.about}>
   <h3>Мы в социальных сетях</h3>
-  <div className={styles.soc}> <div><a href={`https://www.ok.ru/profile/564479305591`} className={styles.link}><FaOdnoklassniki /></a></div> <div><a href={`https://vk.com/id306989633`} className={styles.link}><FaVk /></a> </div> </div> 
+  <div className={styles.soc}> <div><a href={`https://www.ok.ru/profile/564479305591`} className={styles.linksoc}><FaOdnoklassniki /></a></div> <div><a href={`https://vk.com/id306989633`} className={styles.linksoc}><FaVk /></a> </div> </div> 
 </div>
 </div>
 

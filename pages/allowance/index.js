@@ -6,34 +6,6 @@ import styles from "../../styles/allowance.module.css";
 import Link from "next/link";
 
 
-/* const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  }); */
-
-/* export const getStaticPaths = async () => {
-    const res = await client.getEntries({
-      content_type: "allowance",
-    });
-  
-    const paths = res.items.map((item) => {
-      return {
-        params: { id: item.fields.id },
-      };
-    });
-  
-    return {
-      paths,
-      fallback: true,
-    };
-  }; */
-
-
-
-
-
-
-
 
 export const getStaticProps = async () => {
     const client = createClient({

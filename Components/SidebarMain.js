@@ -25,8 +25,8 @@ export default function SidebarMain({ state }) {
               94701, г.Ровеньки, ул.Кооперативная, 1
             </div>
             <div>
-              <div className={styles.address}>utszn_rovenki@mail.ru</div>
-              <div className={styles.address}>(06433)5-02-93</div>
+              <div className={styles.address}><a href="mailto:utszn_rovenki@mail.ru">utszn_rovenki@mail.ru</a></div>
+              <div className={styles.address}><a href="tel:+0643350293">(06433)5-02-93</a></div>
             </div>
           </div>
         </div>

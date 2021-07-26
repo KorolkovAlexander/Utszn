@@ -4,10 +4,10 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import Postcard from "../Components/Postcard";
 
-
 export default function Slider({ posts }) {
   return (
     <Carousel
+      className={styles.main}
       height="350px"
       width="100%"
       autoplay={true}
@@ -16,16 +16,14 @@ export default function Slider({ posts }) {
       wrapAround={true}
       defaultControlsConfig={{
         pagingDotsStyle: {
-          display: 'none'
+          display: "none",
         },
         nextButtonStyle: {
-        display: 'none'
+          display: "none",
         },
         prevButtonStyle: {
-          display: 'none'
-          }
-        
-
+          display: "none",
+        },
       }}
     >
       {/*          <div>{posts.map((post) => (
@@ -40,24 +38,15 @@ export default function Slider({ posts }) {
         <img src="22.jpg" className={styles.image} />
       </div> */}
       <div className={styles.frame}>
-        <img
-          src="1.jpg"
-          className={styles.image}
-        />
+        <img src="1.jpg" className={styles.image} />
       </div>
       <div className={styles.frame}>
-        <img
-          src="2.jpg"
-          className={styles.image}
-        />
+        <img src="2.jpg" className={styles.image} />
       </div>
       <div className={styles.frame}>
-        <img
-          src="3.jpg"
-          className={styles.image}
-        />
+        <img src="3.jpg" className={styles.image} />
       </div>
-{/*       <div className={styles.frame}>
+      {/*       <div className={styles.frame}>
         <img
           src="4.jpg"
           className={styles.image}
@@ -82,12 +71,9 @@ export default function Slider({ posts }) {
         />
       </div> */}
       <div className={styles.frame}>
-        <img
-          src="8.jpg"
-          className={styles.image}
-        />
+        <img src="8.jpg" className={styles.image} />
       </div>
-{/*       <div className={styles.frame}>
+      {/*       <div className={styles.frame}>
         <img
           src="9.jpg"
           className={styles.image}
@@ -100,12 +86,9 @@ export default function Slider({ posts }) {
         />
       </div> */}
       <div className={styles.frame}>
-        <img
-          src="12.jpg"
-          className={styles.image}
-        />
+        <img src="12.jpg" className={styles.image} />
       </div>
-{/*       <div className={styles.frame}>
+      {/*       <div className={styles.frame}>
         <img
           src="13.jpg"
           className={styles.image}

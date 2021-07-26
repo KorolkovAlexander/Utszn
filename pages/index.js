@@ -31,7 +31,7 @@ export default function Home({ posts, mainposts }) {
   const [state, setState] = useState(true);
   const [arrow, setArrow] = useState(true);
   const updateData = (value) => {
-  setState(value);
+    setState(value);
   };
 
   const currentMain = mainposts.length - 1;
@@ -52,10 +52,16 @@ export default function Home({ posts, mainposts }) {
         <link rel="icon" href="/icon-lnr.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap"
+          rel="stylesheet"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <div className={styles.headerframe}>
         <div className={styles.flag}>
