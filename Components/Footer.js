@@ -24,8 +24,7 @@ export default function Footer(){
 
 <div className={styles.about}>
   <h3>Полезные ссылки</h3>
-  <ul className={styles.ul}>{/* <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide1" className={styles.image}/> */}
-{/* <Link href={`/`}> <a>{<li className={styles.li}>Главная</li>}</a> </Link> */}
+  <ul className={styles.ul}>
 <li className={styles.li}>
 <img src="icon-lnr.png" className={styles.image}/><a href={`https://glava-lnr.info/`} className={styles.link}>-Сайт Главы ЛНР</a></li>
 <li className={styles.li}>
