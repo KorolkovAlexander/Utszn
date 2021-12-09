@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
-
+import HeadSite from "../../Components/HeadSite";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -36,7 +36,7 @@ export const getServerSideProps = async (/* { params } */) => {
 
   return {
     props: { posts: items[0] },
-   /*  revalidate: 1, */
+    /*  revalidate: 1, */
   };
 };
 
@@ -46,9 +46,10 @@ export default function Allowanceid({ posts }) {
   const updateData = (value) => {
     setState(value);
   };
- 
+
   return (
     <div>
+      <HeadSite />
       <Sidebar tumb={state} updateData={updateData} />
       <div className={state ? styles.wrap : styles.wrap2}>
         <div key={posts.id} className={styles.image}>
@@ -66,4 +67,3 @@ export default function Allowanceid({ posts }) {
     </div>
   );
 }
-

@@ -8,89 +8,130 @@
   align-items: center;
   background: rgb(0, 3, 26);
   padding: 50px 80px;
-  
 }
 
 .ul {
   display: flex;
 }
 
+@media screen and (max-width: 1150px) {
+  .ul {
+    display: none;
+  }
+}
+
 .li {
- /*  margin-right: 2rem; */
   font-size: 18px;
   list-style-type: none;
   color: white;
   transition: all 0.6s;
 }
 
-.li:hover{
-  color:cornflowerblue;
+.li:hover {
+  color: cornflowerblue;
   transition: all 0.6s;
 }
 
-.list{
+.list {
   color: white;
   font-size: 20px;
   display: flex;
   flex-direction: row;
 }
 
-.list2{
-  color: white;;  
+.list2 {
+  color: white;
   font-size: 20px;
   display: flex;
   flex-direction: row;
 }
 
-.list:hover{
-  color:cornflowerblue;
+.list:hover {
+  color: cornflowerblue;
 }
 
-.list2:hover{
-  color:cornflowerblue;
+.list2:hover {
+  color: cornflowerblue;
 }
 
-.mainmenu{
+.mainmenu {
   margin-right: 5px;
   font-size: 26px;
 }
 
-.icon{
+.icon {
   cursor: pointer;
   transition: all 1s;
   transform: rotate(270deg);
   padding-left: 0.5vh;
 }
 
-.icondefault{
+.icondefault {
   cursor: pointer;
   transition: all 1s;
 }
 
-.contacts{
-  transition: all 0.8s;  
-  visibility:collapse;
+.contacts {
+  transition: all 0.8s;
+  visibility: collapse;
   margin-left: 300px;
   opacity: 0;
   cursor: default;
-  pointer-events: none;  
+  pointer-events: none;
 }
 
-@media screen and (max-width: 1390px){
-  .contacts{
+@media screen and (max-width: 1390px) {
+  .contacts {
     margin-left: 150px;
   }
 }
 
-.contacts:hover{
+.contacts:hover {
   display: none;
 }
 
-.contactsdefault{
+.contactsdefault {
   cursor: pointer;
   transition: all 0.8s;
 }
 
-.link{
+.link {
   margin-right: 2rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.mob {
+  color: beige;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1150px) {
+  .mob {
+    display: none;
+  }
+}
+
+.mobactive {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 9999;
+  position: fixed;
+}
+
+.mobdisabled {
+  height: 10px;
+  width: 10;
+  background: blanchedalmond;
+}
+
+.mobile {
+  z-index: 9999;
 }

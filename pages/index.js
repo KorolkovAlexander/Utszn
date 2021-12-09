@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Postcard from "../Components/Postcard";
 import Header from "../Components/Header";
 import styles from "../styles/Home.module.css";
@@ -11,6 +10,10 @@ import { useState } from "react";
 import MainPostcard from "../Components/MainPostcard";
 import SidebarMain from "../Components/SidebarMain";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Mobile from "../Components/Mobile";
+import Context from "../Components/Context";
+import HeadSite from "../Components/HeadSite";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -30,6 +33,7 @@ export const getStaticProps = async () => {
 export default function Home({ posts, mainposts }) {
   const [state, setState] = useState(true);
   const [arrow, setArrow] = useState(true);
+  const [mobile, setMobile] = useState(false);
   const updateData = (value) => {
     setState(value);
   };
@@ -47,22 +51,7 @@ export default function Home({ posts, mainposts }) {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>УТСЗН АГР ЛНР</title>
-        <link rel="icon" href="/icon-lnr.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap"
-          rel="stylesheet"
-        ></link>
-      </Head>
+      <HeadSite />
       <div className={styles.headerframe}>
         <div className={styles.flag}>
           <img src="flag.png" />
@@ -75,7 +64,9 @@ export default function Home({ posts, mainposts }) {
           <Carousel />
         </div>
       </div>
-      <Header updateData={updateData} />
+
+      <Header main={true} updateData={updateData} />
+
       <main className={state ? styles.mainidefault : styles.maini}>
         <SidebarMain state={state} />
         <div>
@@ -92,17 +83,18 @@ export default function Home({ posts, mainposts }) {
             <Postcard key={post.sys.id} post={post} />
           ))}
         </div>
-        <a
-          className={styles.news}
-          href={"/pagesBundle"}
-          onMouseEnter={() => setArrow(false)}
-          onMouseLeave={() => setArrow(true)}
-        >
-          <div className={styles.news2}>
-            <div>Все новости</div>
-            <div className={styles.arrow}>{func()}</div>
-          </div>
-        </a>
+        <Link href={"/PagesBundle"}>
+          <a
+            className={styles.news}
+            onMouseEnter={() => setArrow(false)}
+            onMouseLeave={() => setArrow(true)}
+          >
+            <div className={styles.news2}>
+              <div>Все новости</div>
+              <div className={styles.arrow}>{func()}</div>
+            </div>
+          </a>
+        </Link>
       </main>
       <Footer className={styles.footer} />
     </div>

@@ -53,14 +53,23 @@
   color: white;
 }
 
-
-.soc{
+.soc {
   display: flex;
   flex-direction: row;
   font-size: 24px;
 }
 
-.linksoc{
+.linksoc {
   font-size: 38px;
   margin-right: 30px;
+}
+
+@media (max-width: 700px) {
+  .common {
+    height: 1200px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
 }

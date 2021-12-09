@@ -71,7 +71,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   transition: margin 1s;
-  background-color:#f8f8f8be;
+  background-color: #f8f8f8be;
 }
 
 @media screen and (max-width: 1390px) {
@@ -201,6 +201,14 @@
   }
 }
 
+@media (max-width: 685px) {
+  .postWrapper {
+    width: 630px;
+    gap: 0px 80px;
+    grid-template-columns: 1fr;
+  }
+}
+
 .mainpost {
   display: flex;
   justify-content: center;
@@ -219,6 +227,12 @@
   padding: 10px;
   margin-right: 200px;
   transition: all 1s;
+}
+
+@media (max-width: 700px) {
+  .news {
+    margin-right: 0px;
+  }
 }
 
 .news2 {

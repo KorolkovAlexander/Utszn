@@ -1,0 +1,44 @@
+.wrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  color: aliceblue;
+  font-size: 28px;
+  /* padding: -50px -80px;
+  margin: -500px; */
+  transition: all 1s;
+}
+
+.wrapFalse {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  color: aliceblue;
+  font-size: 28px;
+  margin-left: -10000px;
+
+  transition: all 1s;
+}
+
+.navmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.button {
+  position: absolute;
+  top: 50px;
+  right: 70px;
+}
+
+.li {
+  list-style-type: none;
+}

@@ -5,6 +5,7 @@ import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
 import Footer from "../../Components/Footer";
+import HeadSite from "../../Components/HeadSite";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -46,9 +47,10 @@ export default function MainPost({ posts }) {
   const updateData = (value) => {
     setState(value);
   };
- 
+
   return (
     <div>
+      <HeadSite />
       <Sidebar tumb={state} updateData={updateData} />
       <div className={state ? styles.wrap : styles.wrap2}>
         <div key={posts.id} className={styles.image}>

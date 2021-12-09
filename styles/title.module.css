@@ -1,5 +1,9 @@
 .wrap {
-  background: linear-gradient(to right, rgba(255, 239, 213, 0.6), rgba(255, 239, 213, 0.1));
+  background: linear-gradient(
+    to right,
+    rgba(255, 239, 213, 0.6),
+    rgba(255, 239, 213, 0.1)
+  );
   height: 150px;
   width: 40%;
   top: 62px;
@@ -10,4 +14,23 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    right: 31%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrap {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrap {
+    font-size: 9px;
+  }
 }
