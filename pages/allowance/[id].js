@@ -5,6 +5,7 @@ import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
 import HeadSite from "../../Components/HeadSite";
+import Desccard from "../../Components/Desccard";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -61,7 +62,9 @@ export default function Allowanceid({ posts }) {
         </div>
         <h1 className={styles.title}>{posts.fields.title}</h1>
         <div className={styles.desc}>
-          {posts.fields.description.content[0].content[0].value}
+        {posts.fields.description.content.map((post) => (
+            <Desccard post={post} />
+          ))}
         </div>
       </div>
     </div>

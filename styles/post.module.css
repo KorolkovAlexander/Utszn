@@ -30,8 +30,9 @@
 
 .desc {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
   margin: 40px auto;
   width: 70%;
   font-size: 22px;

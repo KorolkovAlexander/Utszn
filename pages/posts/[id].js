@@ -6,6 +6,7 @@ import { useState } from "react";
 import Footer from "../../Components/Footer";
 import { useRouter } from "next/router";
 import HeadSite from "../../Components/HeadSite";
+import Desccard from "../../Components/Desccard";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -69,7 +70,9 @@ export default function Post({ posts }) {
         </div>
         <h1 className={styles.title}>{posts.fields.title}</h1>
         <div className={styles.desc}>
-          {posts.fields.description.content[0].content[0].value}
+        {posts.fields.description.content.map((post) => (
+            <Desccard post={post} />
+          ))}
         </div>
       </div>
     </div>

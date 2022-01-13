@@ -1,10 +1,10 @@
-import { useRouter } from "next/router";
 import { createClient } from "contentful";
 import Image from "next/image";
 import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
 import Footer from "../../Components/Footer";
+import { useRouter } from "next/router";
 import HeadSite from "../../Components/HeadSite";
 import Desccard from "../../Components/Desccard";
 
@@ -13,9 +13,9 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 
-/* export const getStaticPaths = async () => {
+/* const Paths = async () => {
   const res = await client.getEntries({
-    content_type: "mainposts",
+    content_type: "posts"
   });
 
   const paths = res.items.map((item) => {
@@ -28,27 +28,35 @@ const client = createClient({
     paths,
     fallback: true,
   };
-}; */
+};  */
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+  const { id } = context.query;
+  const res = await client.getEntries({ content_type: "posts" });
+  /* const paths = res.items.map((item) => {
+    return {
+      params: { id: item.fields.id },
+    };
+  }); */
+
   const { items } = await client.getEntries({
-    content_type: "mainposts",
-    /* "fields.id": params.id, */
+    content_type: "concessions",
+    "fields.id": id,
   });
 
   return {
     props: { posts: items[0] },
-    /* revalidate: 1, */
+    /*  revalidate: 1, */
   };
 };
-
-export default function MainPost({ posts }) {
+export default function InvalidsId({ posts }) {
   const [state, setState] = useState(false);
 
   const updateData = (value) => {
     setState(value);
   };
-
+console.log(posts)
+console.log(posts.fields.description.content.length)
   return (
     <div>
       <HeadSite />
@@ -62,11 +70,15 @@ export default function MainPost({ posts }) {
           />
         </div>
         <h1 className={styles.title}>{posts.fields.title}</h1>
-        <div className={styles.desc}>
-        {posts.fields.description.content.map((post) => (
+         <div className={styles.desc}>
+
+         {posts.fields.description.content.map((post) => (
             <Desccard post={post} />
           ))}
-        </div>
+
+           {/* { 
+          posts.fields.description.content[0].content[0].value} */}
+        </div> 
       </div>
     </div>
   );

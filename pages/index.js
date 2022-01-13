@@ -83,7 +83,7 @@ export default function Home({ posts, mainposts }) {
             <Postcard key={post.sys.id} post={post} />
           ))}
         </div>
-        <Link href={"/pagesBundle"}>
+        <Link href={"/PagesBundle"}>
           <a
             className={styles.news}
             onMouseEnter={() => setArrow(false)}

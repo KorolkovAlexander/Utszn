@@ -1,9 +1,7 @@
 import PostBundle from "../../Components/PostBundle";
-import ReactPaginate from "react-paginate";
 import styles from "../../styles/pagesBundle.module.css";
 import { useState } from "react";
 import Header from "../../Components/Header";
-
 import { createClient } from "contentful";
 import Pagination from "../../Components/Pagination";
 import HeadSite from "../../Components/HeadSite";
@@ -40,7 +38,7 @@ export default function pagesBundle({ posts, mainposts }) {
 
       <Header />
       <div className={styles.content}>
-        {currentPosts.map((post, index, array) => (
+        {currentPosts.map((post) => (
           <PostBundle key={post.sys.id} post={post} />
         ))}
       </div>
@@ -50,7 +48,6 @@ export default function pagesBundle({ posts, mainposts }) {
         totalPosts={posts.length}
         paginate={paginate}
       />
-      {/*  <ReactPaginate  hrefBuilder={hrefBuilder}  onPageChange={onChange} pageCount={Math.ceil(posts.length / postsPerPage)} pageRangeDisplayed={4} marginPagesDisplayed={4} initialPage={1} containerClassName={styles.container} pageClassName={styles.page} previousClassName={styles.previous} nextClassName={styles.next} previousLinkClassName={styles.previouslink} nextLinkClassName={styles.nextlink} pageLinkClassName={styles.pagelink}/> */}
     </div>
   );
 }
