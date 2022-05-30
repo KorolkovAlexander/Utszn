@@ -14,34 +14,34 @@ export default function MainPostcard ({post, firstpost}){
     minute: 'numeric'
 
   }
-  function getDate(str) {
+  /* function getDate(str) {
     var date = new Date(str);
     return date.toLocaleString('ru', options)
   } 
   var dateFormat = require("dateformat");
-var d = post.fields.date 
+var d = post.fields.date  */
 return(
   <div className={styles.postgrid}>
    
      
 <div className={styles.post}>
-<Link href={`mainpost/${post.fields.id}`}>
+<Link href={`mainpost/${post.id}`}>
 <a>
 <div className={styles.postTitle}>
 <a>{post.fields.title}</a></div>
 <div className={styles.postDate}>
 
-{getDate(d)}
+{/* {getDate(d)} */}
 {/* {(dateFormat(d, "dddd, mmmm d, yyyy, h:MM:ss TT").toLocaleString("ru", options))}  */}
 
 </div>
 <div className={styles.postImage}>
 
 <Image className={styles.im}
-                src={"https:" + post.fields.images.fields.file.url}
+                src={"https:" + post.image.url}
                 
-                width= {post.fields.images.fields.file.details.image.width }
-                height={ post.fields.images.fields.file.details.image.height }
+ /*                width= {post.fields.images.fields.file.details.image.width }
+                height={ post.fields.images.fields.file.details.image.height } */
               />
               </div></a></Link>
               </div>
