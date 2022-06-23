@@ -2,7 +2,6 @@ import Postcard from "../Components/Postcard";
 import Header from "../Components/Header";
 import styles from "../styles/Home.module.css";
 import Footer from "../Components/Footer";
-import { createClient } from "contentful";
 import Carousel from "../Components/Slider";
 import Sidebar from "../Components/Sidebar";
 import Title from "../Components/Title";
@@ -20,7 +19,6 @@ import { gql, GraphQLClient } from "graphql-request";
 export const getStaticProps = async () => {
   const url =
     "https://api-eu-central-1.graphcms.com/v2/cl3sptur5aokf01z6hgz30u4h/master";
-
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization:
@@ -47,7 +45,6 @@ export const getStaticProps = async () => {
   `;
 
   const data = await graphQLClient.request(query);
-
   const posts = data.posts;
 
   return {
@@ -66,8 +63,12 @@ export default function Home({ posts, mainposts }) {
   };
 
   /* const currentMain = mainposts.length - 1; */
- /*  const MainPost = mainposts.slice(0, 1);
-  const currentPosts = posts.slice(0, 4); */
+ /*  const MainPost = mainposts.slice(0, 1);*/
+  
+  const currentPosts = posts.slice(posts.length -4, posts.length);
+  currentPosts.reverse();
+   
+
   const func = () => {
     if (arrow) {
       return <FaArrowRight />;
@@ -106,7 +107,7 @@ export default function Home({ posts, mainposts }) {
           ))} */}
         </div>
         <div className={styles.postWrapper}>
-          {posts.map((post) => (
+          {currentPosts.map((post) => (
             <Postcard key={post.id} post={post} />
           ))}
         </div>

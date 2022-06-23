@@ -4,7 +4,7 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import Postcard from "../Components/Postcard";
 
-export default function Slider({ posts }) {
+export default function Slider() {
   return (
     <Carousel
       className={styles.main}

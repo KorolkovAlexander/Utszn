@@ -5,21 +5,8 @@ import Image from "next/image";
 
 
 export default function Postcard ({post}){
- /*   var options = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric'
-
-  } */
- /*  function getDate(str) {
-    var date = new Date(str);
-    return date.toLocaleString('ru', options)
-  } 
-  var dateFormat = require("dateformat"); */
-/* var d = post.fields.date  */
-return(
+ 
+return (
   <div className={styles.postgrid}> 
   
   <Link href={`posts/${post.id}`}><a> 
@@ -27,7 +14,7 @@ return(
 <div className={styles.postTitle}>{post.title}</div>
 <div className={styles.postDate}>
 
-{/* {getDate(d)} */}
+
 
 
 </div>

@@ -7,7 +7,7 @@ export default function Desccard({post}) {
    
     return (
         <div className={styles.container}>
-            {post.content[0].value}
+            {post.text.text}
             <br/>
         </div>
     )
