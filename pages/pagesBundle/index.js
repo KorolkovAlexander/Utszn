@@ -54,7 +54,7 @@ export default function pagesBundle({ posts, mainposts }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-
+currentPosts.re
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
