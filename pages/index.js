@@ -78,6 +78,7 @@ export default function Home({ posts, mainposts }) {
   };
 
   return (
+    
     <div className={styles.container}>
       <HeadSite />
       <div className={styles.headerframe}>
