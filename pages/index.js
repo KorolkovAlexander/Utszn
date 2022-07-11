@@ -80,6 +80,8 @@ export default function Home({ posts, mainposts }) {
   return (
     
     <div className={styles.container}>
+      <head meta name="description" content="Сайт УТСЗН города Ровеньки"/> 
+
       <HeadSite />
       <div className={styles.headerframe}>
         <div className={styles.flag}>
@@ -109,7 +111,7 @@ export default function Home({ posts, mainposts }) {
         </div>
         <div className={styles.postWrapper}>
           {currentPosts.map((post) => (
-            <Postcard key={post.id} post={post} />
+            <Postcard key={post.slug} post={post} />
           ))}
         </div>
         <Link href={"/pagesBundle"}>

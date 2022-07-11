@@ -9,7 +9,7 @@ export default function Postcard ({post}){
 return (
   <div className={styles.postgrid}> 
   
-  <Link href={`posts/${post.id}`}><a> 
+  <Link href={`posts/${post.slug}`}><a> 
 {post.date}
 <div className={styles.postTitle}>{post.title}</div>
 <div className={styles.postDate}>

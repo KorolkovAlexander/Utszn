@@ -10,7 +10,9 @@ import Desccard from "../../Components/Desccard";
 import { gql, GraphQLClient } from "graphql-request";
 
 export const getServerSideProps = async (pageContext) => {
-  console.log(pageContext.query)
+  const pageSlug = pageContext.query.id
+  console.log(pageContext)
+  
   const url =
     "https://api-eu-central-1.graphcms.com/v2/cl3sptur5aokf01z6hgz30u4h/master";
 
@@ -22,8 +24,10 @@ export const getServerSideProps = async (pageContext) => {
   });
 
   const query = gql`
-  query {
-    posts {
+  query  ($pageSlug: String!)  {
+    posts (where : {
+      slug: $pageSlug
+    })  {
       title
       slug
       id
@@ -37,9 +41,13 @@ export const getServerSideProps = async (pageContext) => {
       date
     }
   }
-  `;
+  `
 
-  const data = await graphQLClient.request(query);
+  const variables = {
+    pageSlug,
+  }
+
+  const data = await graphQLClient.request(query, variables);
 
   const posts = data.posts;
 
