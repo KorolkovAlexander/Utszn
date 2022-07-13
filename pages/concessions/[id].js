@@ -76,8 +76,7 @@ console.log(posts.fields.description.content.length)
             <Desccard post={post} />
           ))}
 
-           {/* { 
-          posts.fields.description.content[0].content[0].value} */}
+       
         </div> 
       </div>
     </div>
