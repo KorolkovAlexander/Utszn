@@ -21,12 +21,6 @@ export default function PriceRequest({ request }) {
     <div>
       <HeadSite />
       <Header />
-      <h1 className={styles.h1}>Запросы ценовых предложений</h1>
-      <div className={styles.requestWrapper}>
-        {request.map((post) => (
-          <Request key={post.sys.id} post={post} />
-        ))}
-      </div>
 
       <Footer />
     </div>
