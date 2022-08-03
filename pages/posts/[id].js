@@ -30,7 +30,9 @@ export const getServerSideProps = async (pageContext) => {
     })  {
       title
       slug
+      markdown
       id
+      desc
       text {
         text
       }
@@ -79,6 +81,8 @@ export default function Post({ posts }) {
         <h1 className={styles.title}>{posts.title}</h1>
         <div className={styles.desc}>
         {posts[0].text.text}
+        {posts[0].markdown}
+        {posts[0].desc}
         </div>
       </div>
     </div>

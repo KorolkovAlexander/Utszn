@@ -43,7 +43,7 @@ updateMenu(state)
           <li className={styles.li}>Инвалидам</li>
           </a></Link>
           <Link href={`price-request/`}><a className={styles.link}>
-          <li className={styles.li}>Ценовые запросы</li>
+          <li className={styles.li}>Компенсация на уголь</li>
           </a></Link>
         </ul>
 

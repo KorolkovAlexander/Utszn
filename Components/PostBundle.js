@@ -6,7 +6,7 @@ export default function PostBundle({ post }) {
   
   return (
     <div className={styles.post}>
-      <Link href={`posts/${post.id}`}>
+      <Link href={`posts/${post.slug}`}>
         <div className={styles.somePost}>
           <Image
             src={post.image.url}

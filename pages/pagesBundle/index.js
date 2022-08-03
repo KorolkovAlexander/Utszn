@@ -7,6 +7,7 @@ import HeadSite from "../../Components/HeadSite";
 import { gql, GraphQLClient } from "graphql-request";
 
 
+
 export const getStaticProps = async () => {
   const url =
     "https://api-eu-central-1.graphcms.com/v2/cl3sptur5aokf01z6hgz30u4h/master";

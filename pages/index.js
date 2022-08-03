@@ -32,6 +32,7 @@ export const getStaticProps = async () => {
       title
       slug
       id
+      markdown
       text {
         text
       }
