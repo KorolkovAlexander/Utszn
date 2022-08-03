@@ -1,19 +1,20 @@
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
+import { useRouter } from "next/router";
 import { createClient } from "contentful";
-import Request from "../../Components/Request";
-import styles from "../../styles/allowance.module.css";
-import HeadSite from "../../Components/HeadSite";
+import Image from "next/image";
+import styles from "../../styles/post.module.css";
 import Sidebar from "../../Components/Sidebar";
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-
+import HeadSite from "../../Components/HeadSite";
+import Desccard from "../../Components/Desccard";
 import { gql, GraphQLClient } from "graphql-request";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (pageContext) => {
+  const pageSlug = pageContext.query.id
+  console.log(pageContext)
+  
   const url =
     "https://api-eu-central-1.graphcms.com/v2/cl3sptur5aokf01z6hgz30u4h/master";
+
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization:
@@ -22,60 +23,66 @@ export const getStaticProps = async () => {
   });
 
   const query = gql`
-  query {
-    coals {
+  query  ($pageSlug: String!)  {
+    coals (where : {
+      slug: $pageSlug
+    })  {
       title
       slug
       id
-      text {
+      text2{
         text
       }
       image {
         id
         url
       }
+      date
     }
   }
-  `;
+  `
 
-  const data = await graphQLClient.request(query);
+  const variables = {
+    pageSlug,
+  }
+
+  const data = await graphQLClient.request(query, variables);
+
   const coals = data.coals;
 
   return {
     props: {
-      coals,
+      coals
     },
   };
 };
-export default function PriceRequest({ coals }) {
+
+export default function Coalid({ coals }) {
   const [state, setState] = useState(false);
+
   const updateData = (value) => {
     setState(value);
   };
 
-
-
   return (
     <div>
       <HeadSite />
-      <Header />
-
-      <div className={styles.wrapper}>
-        {coals.map((coals) => (
-          <Link href={`/price-request/${coals.slug}`}>
-            <a className={styles.post}>
-              <h1>{coals.title}</h1>
-              <div /* key={posts.id} className={styles.image} */>
-                <Image
-                  src={coals.image.url} height={'370px'} width={'550px'}
-                />
-              </div>
-            </a>
-          </Link>
-        ))}
+      <Sidebar tumb={state} updateData={updateData} />
+      <div className={state ? styles.wrap : styles.wrap2}>
+        <div key={coals.id} className={styles.image}>
+          <Image
+                        src={coals[0].image.url}
+                        width={'580px'}
+                        height={'325px'}
+          />
+        </div>
+        <h1 className={styles.title}>{posts.title}</h1>
+        <div className={styles.desc}>
+         {coals[0].text.map((post) => (
+            <Desccard post={post} />
+          ))}  
+        </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

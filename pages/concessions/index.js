@@ -23,25 +23,7 @@ export default function Concessions({ posts }) {
   return (
     <div>
       <HeadSite />
-
       <Header />
-
-      <div className={styles.wrapper}>
-        {posts.map((posts) => (
-          <Link href={`/concessions/${posts.fields.id}`}>
-            <a className={styles.post}>
-              <h1>{posts.fields.title}</h1>
-              <div /* key={posts.id} className={styles.image} */>
-                <Image
-                  src={"https:" + posts.fields.images.fields.file.url}
-                  width={posts.fields.images.fields.file.details.image.width}
-                  height={posts.fields.images.fields.file.details.image.height}
-                />
-              </div>
-            </a>
-          </Link>
-        ))}
-      </div>
 
       <Footer />
     </div>

@@ -22,7 +22,7 @@ const Header = ({ updateData, isMobile, main }) => {
       updateData(state);
       return (
         <header className={styles.header}>
-          <div className={state ? styles.list : styles.list2} onClick={handler}>
+          <div className={state ? styles.list : styles.list2} /* onClick={handler} */>
             <div className={styles.mainmenu}>
               <div className={state ? styles.icondefault : styles.icon}>
                 <RiFileListLine />
@@ -103,7 +103,7 @@ const Header = ({ updateData, isMobile, main }) => {
               </Link>
               <Link href={`price-request/`}>
                 <a className={styles.link}>
-                  <li className={styles.li}>Ценовые запросы</li>
+                  <li className={styles.li}>Компенсация на уголь</li>
                 </a>
               </Link>
             </ul>
