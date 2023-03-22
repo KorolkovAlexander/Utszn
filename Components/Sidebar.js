@@ -47,7 +47,7 @@ export default function Sidebar({ updateData }) {
         </Link>
         <Link href={"/subsidy"}>
           <a className={styles.linkclass}>
-            Субсидия
+            Компенсация
           </a>
         </Link>
         <Link href={"/invalids"}>

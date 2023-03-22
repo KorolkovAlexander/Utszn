@@ -37,7 +37,7 @@ updateMenu(state)
           <li className={styles.li}>Льготы</li>
           </a></Link>
           <Link href={`subsidy/`}><a className={styles.link}>
-          <li className={styles.li}>Субсидия</li>
+          <li className={styles.li}>Компенсация</li>
           </a></Link>
           <Link href={`invalids/`}><a className={styles.link}>
           <li className={styles.li}>Инвалидам</li>
