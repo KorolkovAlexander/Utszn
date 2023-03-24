@@ -30,14 +30,13 @@ export const getServerSideProps = async (pageContext) => {
       title
       slug
       id
-      text2{
+      text{
         text
       }
       image {
         id
         url
       }
-      date
     }
   }
   `

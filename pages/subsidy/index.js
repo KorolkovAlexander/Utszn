@@ -39,15 +39,15 @@ export const getStaticProps = async () => {
   `;
 
   const data = await graphQLClient.request(query);
-  const coals = data.subs;
+  const subs = data.subs;
 
   return {
     props: {
-      coals,
+      subs,
     },
   };
 };
-export default function PriceRequest({ coals }) {
+export default function PriceRequest({ subs }) {
   const [state, setState] = useState(false);
   const updateData = (value) => {
     setState(value);
@@ -61,13 +61,13 @@ export default function PriceRequest({ coals }) {
       <Header />
 
       <div className={styles.wrapper}>
-        {coals.map((coals) => (
-          <Link href={`/price-request/${coals.slug}`}>
+        {subs.map((subs) => (
+          <Link href={`/subsidy/${subs.slug}`}>
             <a className={styles.post}>
-              <h1>{coals.title}</h1>
+              <h1>{subs.title}</h1>
               <div /* key={posts.id} className={styles.image} */>
                 <Image
-                  src={coals.image.url} height={'370px'} width={'550px'}
+                  src={subs.image.url} height={'370px'} width={'550px'}
                 />
               </div>
             </a>

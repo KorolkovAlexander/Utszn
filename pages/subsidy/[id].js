@@ -30,14 +30,13 @@ export const getServerSideProps = async (pageContext) => {
       title
       slug
       id
-      text2{
+      text{
         text
       }
       image {
         id
         url
       }
-      date
     }
   }
   `
@@ -48,16 +47,16 @@ export const getServerSideProps = async (pageContext) => {
 
   const data = await graphQLClient.request(query, variables);
 
-  const coals = data.subs;
+  const subs = data.subs;
 
   return {
     props: {
-      coals
+      subs
     },
   };
 };
 
-export default function Coalid({ coals }) {
+export default function Subsid({ subs }) {
   const [state, setState] = useState(false);
 
   const updateData = (value) => {
@@ -69,16 +68,16 @@ export default function Coalid({ coals }) {
       <HeadSite />
       <Sidebar tumb={state} updateData={updateData} />
       <div className={state ? styles.wrap : styles.wrap2}>
-        <div key={coals.id} className={styles.image}>
+        <div key={subs.id} className={styles.image}>
           <Image
-                        src={coals[0].image.url}
+                        src={subs[0].image.url}
                         width={'580px'}
                         height={'325px'}
           />
         </div>
-        <h1 className={styles.title}>{posts.title}</h1>
+        <h1 className={styles.title}>{subs.title}</h1>
         <div className={styles.desc}>
-         {coals[0].text.map((post) => (
+         {subs[0].text.map((post) => (
             <Desccard post={post} />
           ))}  
         </div>
